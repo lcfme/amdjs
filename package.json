@@ -1,0 +1,23 @@
+{
+  "name": "amdjs",
+  "version": "0.0.1",
+  "description": "an simple but robust implementation of Asynchronous Module Definition",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && webpack --progress",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "amdjs",
+    "requirejs",
+    "amd.js"
+  ],
+  "author": "Liu Chaofan",
+  "license": "MIT",
+  "dependencies": {
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.4.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}
