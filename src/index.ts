@@ -25,11 +25,15 @@ function amd(deps: any, cb?: any, name?: string) {
   // If you wannt concat many js files to one file,
   // It is nessery to have the ability to set custom name for Mod.
   // But It hasn't been implemented.
-  const url = document.currentScript
-    ? (document.currentScript as HTMLScriptElement).src
-    : Math.random()
-        .toString(32)
-        .substr(2);
+  const url =
+    (document.currentScript
+      ? (document.currentScript as HTMLScriptElement).src
+      : Math.random()
+          .toString(32)
+          .substr(2)) ||
+    Math.random()
+      .toString(32)
+      .substr(2);
   const mod = Mod.getMod(url, undefined, name);
   mod.onAmd(deps, cb);
 }
